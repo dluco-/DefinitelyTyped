@@ -4,12 +4,12 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.5
 
-import { FC, Ref, ReactNode, Component } from "react";
-import { ListOnItemsRenderedProps, FixedSizeList, VariableSizeList } from 'react-window';
+import { Component, ReactNode, Ref } from "react";
+import { ListOnItemsRenderedProps } from 'react-window';
 
 type OnItemsRendered = (props: ListOnItemsRenderedProps) => any;
 
-interface InfiniteLoaderProps {
+export interface InfiniteLoaderProps {
     isItemLoaded: (index: number) => boolean;
     loadMoreItems: (startIndex: number, stopIndex: number) => Promise<any>;
     itemCount: number;
@@ -21,4 +21,4 @@ interface InfiniteLoaderProps {
 declare class InfiniteLoader extends Component<InfiniteLoaderProps> {
 }
 
-export = InfiniteLoader;
+export default InfiniteLoader;
